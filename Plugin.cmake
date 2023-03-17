@@ -98,12 +98,14 @@ endmacro()
 macro(add_plugin_libraries)
   add_subdirectory("${CMAKE_SOURCE_DIR}/libs/marnav")
   target_link_libraries(${PACKAGE_NAME} ocpn::marnav)
-  if(${WITH_TESTS})
+  add_subdirectory("${CMAKE_SOURCE_DIR}/libs/rapidjson")
+  target_link_libraries(${PACKAGE_NAME} ocpn::rapidjson)
+  if (${WITH_TESTS})
     include(CTest)
     add_subdirectory("${CMAKE_SOURCE_DIR}/tests")
     add_dependencies(${CMAKE_PROJECT_NAME} tests)
-  endif()
-endmacro()
+  endif ()
+endmacro ()
 
 add_custom_target(doxygen-docs
   COMMAND doxygen
