@@ -45,12 +45,12 @@ modules:
         - type: archive
           url: https://github.com/Tencent/rapidjson/archive/refs/tags/v1.1.0.tar.gz
           sha256: bf7ced29704a1e696fbccf2a2b4ea068e7774fa37f6d7dd4039d0787f8bed98e
-        # - type: patch
-        #   paths:
-        #     - src/0010-rapidjson-1.1.0-c++20.patch
-        #     - src/0011-rapidjson-1.1.0-do_not_include_gtest_src_dir.patch
-        #     - src/0012-Fix-Wclass-memaccess-warnings-errors.patch
-        #     - src/0013-gcc7.patch
+        - type: patch
+          paths:
+          - ../flatpak/patches/0010-rapidjson-1.1.0-c++20.patch
+          - ../flatpak/patches/0011-do_not_include_gtest_src_dir.patch
+          - ../flatpak/patches/0012-Fix-Wclass-memaccess-warnings-errors.patch
+          - ../flatpak/patches/0013-gcc7.patch
  
     - name: @app_id
       no-autogen: true
