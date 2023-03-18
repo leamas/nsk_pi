@@ -40,11 +40,12 @@ endif ()
 add_library(_RAPIDJSON_IF INTERFACE)
 add_library(ocpn::rapidjson ALIAS _RAPIDJSON_IF)
 
+string(TOLOWER ${PKG_NAME} _app_id)
 if (EXISTS /app/bin)
   target_include_directories(
     _RAPIDJSON_IF INTERFACE
-      "/app/extensions/nsk_pi/include/"
-      "/app/extensions/nsk_pi/include/rapidjson"
+    "/app/extensions/${_app_id}/include/"
+    "/app/extensions/${_app_id}/include/rapidjson"
   )
   return ()
 endif ()
