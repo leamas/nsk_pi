@@ -12,8 +12,8 @@
       sha256: bf7ced29704a1e696fbccf2a2b4ea068e7774fa37f6d7dd4039d0787f8bed98e
     - type: patch
       paths:
-      - ../flatpak/patches/0010-rapidjson-1.1.0-c++20.patch
-      - ../flatpak/patches/0011-do_not_include_gtest_src_dir.patch
-      - ../flatpak/patches/0012-Fix-Wclass-memaccess-warnings-errors.patch
-      - ../flatpak/patches/0013-gcc7.patch
+      - ../libs/rapidjson/patches/0010-rapidjson-1.1.0-c++20.patch
+      - ../libs/rapidjson/patches/0011-do_not_include_gtest_src_dir.patch
+      - ../libs/rapidjson/patches/0012-Fix-Wclass-memaccess-warnings-errors.patch
+      - ../libs/rapidjson/patches/0013-gcc7.patch
  
