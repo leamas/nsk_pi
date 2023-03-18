@@ -248,8 +248,8 @@ workflows:
       - build-flatpak-x86:
           <<: *std-filters
 
-      # - build-macos:
-      #   <<: *std-filters
+      - build-macos:
+         <<: *std-filters
 
       - build-android-arm64:
           <<: *std-filters
